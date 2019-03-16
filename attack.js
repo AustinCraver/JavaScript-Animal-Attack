@@ -5,7 +5,8 @@ var bodyH = bodyW/2;
 var dotX = bodyX - 5;
 var dotY = bodyY - 105;
 var eyes = (30, 30);
-var hungry = (1, 1);
+var hungry = (4, 1);
+var hungry2 = (1, 4);
 
 draw = function() {
     background(130, 93, 7);
@@ -30,12 +31,20 @@ draw = function() {
     ellipse(bodyX - 40, bodyY - 126, eyes * 0.5, eyes * 0.5); // pupil of left eye
     ellipse(bodyX + 40, bodyY - 126, eyes * 0.5, eyes * 0.5); // pupil of right eye
 
+    /* The following hungry 1 and 2 produce animated ellipses that grow due to being
+       incremented. */
+    
+
     fill(250, 10, 170);
-    ellipse(0, 0, hungry, hungry);
+    ellipse(10, 10, hungry, hungry);
+    
+    fill(193, 8, 196);
+    ellipse(-20, -20, hungry2, hungry2);
     
     hungry++;
+    hungry2++;
     
-};    
+   };    
 
 
 
